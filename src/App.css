@@ -1,38 +1,137 @@
-.App {
+/* Reset de estilos básicos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo global */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo dos cabeçalhos */
+h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilo dos parágrafos */
+p {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilo dos contêineres */
+.layout-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-container {
   display: flex;
   flex-direction: column;
+}
+
+.products-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  margin-right: 20px;
+  display: flex;
+  flex: 2;
+}
+
+.cart-management-container {
+  display: flex;
+  flex-direction: column; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Estilo dos produtos */
+.products, .cart {
+  display: flex;
+}
+
+.products > div, .cart > div {
+  flex: 1 1 calc(50% - 20px);
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.products > div img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.products > div h3, .cart > div h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilo do botão */
+button {
+  border: none;
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e26053;
+}
+
+/* Estilo do campo de entrada */
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Estilo da mensagem de erro */
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
